@@ -1,0 +1,51 @@
+body
+{
+	margin:0px;
+	padding:0px;
+	background-color:pink;
+}
+ul
+{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+ul li
+{
+	margin:30px;
+	text-align:center;
+	font-size:40px;
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	background-color:white;
+	line-height:100px;
+	list-style:none;
+	float:right;
+	z-index:1;
+position:relative;
+	}
+ul li:hover
+{
+	color:gray;
+}
+ul li:before
+{
+	content:'';
+	top:0%;
+	left: 0%;
+	position:absolute;
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	background-color:pink;
+	transition:.5s;
+	transform:scale(0);
+	z-index:-1;
+	
+} 
+ul li:hover:before
+{
+	transform:scale(0.9);
+}
